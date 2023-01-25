@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from . models import Courses
 
 def index(request):
-    course = Courses.objects.delete()
+    course = Courses.objects.all()
 
     return render(request,'index.html',{'courses':course})
 
